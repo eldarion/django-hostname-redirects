@@ -1,0 +1,16 @@
+An app to automatically redirect alternate hostnames to their canonical
+sites. Developed for a dynamic-multitenancy implementation, but could be
+useful otherwise as well.
+
+
+USAGE:
+- Add the middleware to the top of your middleware list (so it is
+  processed first at request time).
+- Add redirects to your actual sites from their alternate domain names.
+
+
+OPTIONAL FEATURES:
+- Set CATCHALL_REDIRECT_HOSTNAME='example.com' to automatically redirect
+  unknown hostnames to that site. (optional)
+- Set REMOVE_WWW=True to remove "www." from the beginning of hostnames
+  and redirect (opposite of PREPEND_WWW). (optional)
